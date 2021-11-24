@@ -1,0 +1,78 @@
+import React from "react";
+import * as S from "./style";
+import { graphql, useStaticQuery } from 'gatsby'
+
+
+export function Header() {
+
+  const data = useStaticQuery(graphql`
+    query {
+      alldata {
+        headers {
+         logoheader {
+      url
+    }
+    quemsou
+    projetos
+    galeria
+    github {
+      url
+    }
+    codesandbox{
+      url
+    }
+    codepen{
+      url
+    }
+    linkedin{
+      url
+    }
+    instagram{
+      url
+    }
+  
+           }
+      }
+    }
+      `)
+
+  const {
+    logoheader,
+    quemsou,
+    projetos,
+    galeria,
+    github,
+    codesandbox,
+    codepen,
+    linkedin,
+    instagram
+
+
+  } = data.alldata.headers[0];
+
+  return (
+      <S.Container>
+        <S.BoxLogo>
+          <img src={logoheader.url} alt="" />
+        </S.BoxLogo>
+
+        <S.BoxContent>
+          <h2> {quemsou} </h2>
+          <h2> {projetos} </h2>
+          <h2> {galeria} </h2>
+
+        </S.BoxContent>
+
+        <S.BoxIcons>
+          <img src={github.url} alt="" />
+          <img src={codesandbox.url} alt="" />
+          <img src={codepen.url} alt="" />
+          <img src={linkedin.url} alt="" />
+          <img src={instagram.url} alt="" />
+
+
+        </S.BoxIcons>
+      </S.Container>
+
+  );
+}
