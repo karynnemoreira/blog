@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from '../components/Header';
+import { Main } from '../components/Main';
 
 
   export default function Index() {
@@ -7,7 +8,7 @@ import { Header } from '../components/Header';
     <div>      
         <title> BLOG DA KAKA </title>
       <Header />
-    
+    <Main />
     </div>
   );
     }
