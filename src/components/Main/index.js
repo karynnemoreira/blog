@@ -48,6 +48,21 @@ export function Main() {
 
   return (
       <S.Container>
+
+<S.ContainerTwo>
+
+<S.BoxContainerOne>
+  <img src={imgmainradius.url} alt=""/>
+</S.BoxContainerOne>
+
+<S.BoxContainerTwo>
+  <h2> {titlemain} </h2>
+   <p> {paragraphmain} </p>
+
+</S.BoxContainerTwo>
+
+</S.ContainerTwo>
+
         <S.ContainerOne>
       
 <S.Box1>
@@ -66,20 +81,6 @@ export function Main() {
 </S.Box3>
 
 </S.ContainerOne>
-
-<S.ContainerTwo>
-
-<S.BoxContainerOne>
-  <img src={imgmainradius.url} alt=""/>
-</S.BoxContainerOne>
-
-<S.BoxContainerTwo>
-  <h2> {titlemain} </h2>
-   <p> {paragraphmain} </p>
-
-</S.BoxContainerTwo>
-
-</S.ContainerTwo>
 
       </S.Container>
 

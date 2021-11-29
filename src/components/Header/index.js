@@ -56,12 +56,7 @@ export function Header() {
           <img src={logoheader.url} alt="" />
         </S.BoxLogo>
 
-        <S.BoxContent>
-          <h2> {quemsou} </h2>
-          <h2> {projetos} </h2>
-          <h2> {galeria} </h2>
-
-        </S.BoxContent>
+        
 
         <S.BoxIcons>
           <img src={github.url} alt="" />
