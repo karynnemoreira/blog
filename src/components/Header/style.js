@@ -4,29 +4,34 @@ import styled from 'styled-components';
 
 export const Container = styled.div` 
 background-color: #F5F5F5;
+
 width: 100%;
 display:flex;
-justify-content: space-evenly;
+justify-content: space-between;
 align-items:center;
 `
 
 export const BoxLogo = styled.div` 
-width: 20%;
+width: 20% ;
+display: flex;
+justify-content: center;
 
 img{
-    width: 50%;
-    border-radius: 10%;
+    width: 40%;
+    border-radius: 20%;
+    border:solid white;
 }
 `
 
 
 export const BoxIcons = styled.div` 
 width: 40%;
+
 display:flex;
-justify-content: space-evenly;
+justify-content: space-around;
 
 img{
-    width: 10%;
+    width: 8%;
     border-radius: 50%;
 }
 `

@@ -12,9 +12,7 @@ export function Header() {
          logoheader {
       url
     }
-    quemsou
-    projetos
-    galeria
+    
     github {
       url
     }
@@ -38,9 +36,6 @@ export function Header() {
 
   const {
     logoheader,
-    quemsou,
-    projetos,
-    galeria,
     github,
     codesandbox,
     codepen,

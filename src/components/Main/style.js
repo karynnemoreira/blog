@@ -4,8 +4,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div` 
 width: 100%;
-background: rgb(179,58,180);
-background: linear-gradient(90deg, rgba(179,58,180,1) 0%, rgba(253,179,29,1) 50%, rgba(69,149,252,1) 100%);
+background: linear-gradient(180deg, #A60061 14.285%,
+		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
+		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
+		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);
 display: flex;
 flex-direction: column;
 img{
@@ -14,14 +16,14 @@ img{
 `
 
 export const ContainerTwo = styled.div` 
-margin-top: 5rem;
+margin-top: 1rem;
 width: 100%;
 display: flex;
 `
 
 
 export const BoxContainerOne = styled.div`
-width: 50%;
+width: 40%;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -37,10 +39,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
-h2{
-        font-size: 5vh;
+color: white;
 
-}
+
 p{
     width: 60%;
     font-size: 4vh;
@@ -63,15 +64,14 @@ position: static;
 
 img{
  width: 50% ;
-   &:hover{
-       width: 70%;
-    }
+ 
 }
 button{
-    width:  ;
+     width: 40%;
+    height: 8vh;
+    bottom: 6rem;
     position: relative;
-
-    bottom: 7rem;
+background-color: red;
 }
 `
 
@@ -88,14 +88,15 @@ position: static;
 img{
      width: 60%;
        &:hover{
-       width: 70%;
+       width: ;
     }
 }
 button{
-    width: ;
-    position: relative;
-
+     width: 30%;
+    height: 8vh;
     bottom: 4rem;
+    position: relative;
+background-color: red;
 }
 `
 export const Box3 = styled.div` 
@@ -110,14 +111,17 @@ position: static;
 img{
     width: 80%;
   &:hover{
-       width: 95%;
+       width: ;
     }
 
 }
 button{
-    width: ;
-    bottom: 2rem;
+    width: 40%;
+    height: 8vh;
+    bottom: 4rem;
 position: relative;
+background-color: red;
+
 }
 `
 

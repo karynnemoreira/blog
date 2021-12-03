@@ -1,7 +1,14 @@
 import React from "react";
 import * as S from "./style";
 import { graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
+import styled from "styled-components";
 
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #FFF;  
+`;
 
 export function Main() {
 
@@ -33,8 +40,8 @@ export function Main() {
       `)
 
   const {
-    
-    img1Main, 
+
+    img1Main,
     btn1Main,
     img2Main,
     btn2Main,
@@ -43,46 +50,50 @@ export function Main() {
     titlemain,
     paragraphmain,
     imgmainradius
-  
+
   } = data.alldata.mains[0];
 
   return (
-      <S.Container>
+    <S.Container>
 
-<S.ContainerTwo>
+      <S.ContainerTwo>
 
-<S.BoxContainerOne>
-  <img src={imgmainradius.url} alt=""/>
-</S.BoxContainerOne>
+        <S.BoxContainerOne>
+          <img src={imgmainradius.url} alt="" />
+        </S.BoxContainerOne>
 
-<S.BoxContainerTwo>
-  <h2> {titlemain} </h2>
-   <p> {paragraphmain} </p>
+        <S.BoxContainerTwo>
+          <p> {paragraphmain} </p>
 
-</S.BoxContainerTwo>
+        </S.BoxContainerTwo>
 
-</S.ContainerTwo>
+      </S.ContainerTwo>
 
-        <S.ContainerOne>
-      
-<S.Box1>
-  <img src={img1Main.url} alt=""/>
-  <button> {btn1Main} </button>
-</S.Box1>
+      <S.ContainerOne>
 
-<S.Box2>
-  <img src={img2Main.url} alt=""/>
-  <button> {btn2Main} </button>
-</S.Box2>
+        <S.Box1>
+          <img src={img1Main.url} alt="" />
+          <button>  <StyledLink to="/Sobre"> {btn1Main} </StyledLink> </button>
 
-<S.Box3>
-  <img src={img3Main.url} alt=""/>
-  <button> {btn3Main} </button>
-</S.Box3>
+        </S.Box1>
 
-</S.ContainerOne>
+        <S.Box2>
+          <img src={img2Main.url} alt="" />
 
-      </S.Container>
+          <button>  <StyledLink to="/Projetos"> {btn2Main} </StyledLink> </button>
+
+        </S.Box2>
+
+        <S.Box3>
+          <img src={img3Main.url} alt="" />
+
+          <button>  <StyledLink to="/Galeria"> {btn3Main} </StyledLink> </button>
+
+        </S.Box3>
+
+      </S.ContainerOne>
+
+    </S.Container>
 
   );
 }
