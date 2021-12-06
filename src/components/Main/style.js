@@ -64,7 +64,7 @@ position: static;
 
 img{
  width: 50% ;
- 
+ border-radius: 20%;
 }
 button{
      width: 40%;
@@ -87,9 +87,8 @@ position: static;
 
 img{
      width: 60%;
-       &:hover{
-       width: ;
-    }
+   border-radius: 20%;
+
 }
 button{
      width: 30%;
@@ -110,9 +109,8 @@ position: static;
 
 img{
     width: 80%;
-  &:hover{
-       width: ;
-    }
+   border-radius: 20%;
+
 
 }
 button{

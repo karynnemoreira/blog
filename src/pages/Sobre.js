@@ -8,10 +8,11 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100%;
-  background-color: pink;
-  
+background: linear-gradient(180deg, #A60061 14.285%,
+		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
+		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
+		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);  
 `
-
 
 const BoxButton = styled.button `
 width: 100%;
@@ -51,9 +52,7 @@ export default function Sobre() {
     return (
         <Container>
     
-
-
-            <BoxButton>
+	            <BoxButton>
             <Link to="/"> <button> Voltar </button> </Link>
             </BoxButton>
 

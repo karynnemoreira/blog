@@ -1,16 +1,46 @@
 import React from 'react'
-
 import { Link } from 'gatsby'
-
 import styled from "styled-components"
-
-
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
   width: 100%;
-  background-color: pink;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+background: linear-gradient(180deg, #A60061 14.285%,
+		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
+		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
+		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);  
+
 `
+
+const Box1 = styled.div`
+width: 35%;
+display: flex;
+flex-direction: column;
+`
+
+const Box2 = styled.div`
+width: 35%;
+display: flex;
+flex-direction: column;
+`
+
+const Box3 = styled.div`
+width: 35%;
+display: flex;
+flex-direction: column;
+`
+const Box4 = styled.div`
+width: 35%;
+display: flex;
+flex-direction: column;
+
+`
+
 
 
 const BoxButton = styled.button `
@@ -46,17 +76,93 @@ Button:active {
 }
 `
 
-
 export default function Projetos() {
-    return (
-        <Container>
-    
+
+	const data = useStaticQuery(graphql`
+
+query {
+	alldata{
+		projetos {
+    imgproj1 {
+      url
+    }
+    titleproj1
+    paragraphproj1
+    imgproj2{
+      url
+    }
+    titleproj2
+    paragraphoproj2
+    imgproj3{
+      url
+    }
+    titleproj3
+    paragraphproj3
+    imgproj4{
+      url
+    }
+    titleproj4
+    paragraphproj4
+  }
+ 
+  }
+	}
+
+`)
+
+	const {
+		imgproj1,
+		titleproj1,
+		paragraphproj1,
+		imgproj2,
+		titleproj2,
+		paragraphproj2,
+		imgproj3,
+		titleproj3,
+		paragraphproj3,
+		imgproj4,
+		titleproj4,
+		paragraphproj4
+
+	} = data.alldata.projetos[0];
+
+	return (
+		<Container>
+			<Box1>
+				
+				<h2> {titleproj1} </h2>
+				<p> {paragraphproj1} </p>
+				<img src={imgproj1.url} alt="" />
+			</Box1>
+
+			<Box2>
+				<h2> {titleproj2} </h2>
+				<p> {paragraphproj2} </p>				
+				<img src={imgproj2.url} alt="" />
+			</Box2>
+
+			<Box3>
+				<h2> {titleproj3} </h2>
+				<p> {paragraphproj3} </p>
+				<img src={imgproj3.url} alt="" />
+			</Box3>
+
+			<Box4>
+				<h2> {titleproj4} </h2>
+				<p> {paragraphproj4} </p>
+				<img src={imgproj4.url} alt="" />
+			</Box4>
 
 
-            <BoxButton>
+			
+	            <BoxButton>
             <Link to="/"> <button> Voltar </button> </Link>
             </BoxButton>
 
-        </Container>
-    )
+		</Container>
+
+
+	)
+
 }
+
