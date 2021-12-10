@@ -39,87 +39,88 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
-color: white;
-
-
+color: ;
 p{
     width: 60%;
     font-size: 4vh;
 }
-
 `
 export const ContainerOne = styled.div` 
 width: 100%;
+margin-top: 4rem;
+margin-bottom: 2rem;
 display: flex;
-margin-top: 7rem;
+
+img{
+width: 60%;
+ border-radius: 20%;
+}
+
+
+button{
+    font-size: 3vh;
+    margin-top: 1rem;
+    border-radius: 20%;
+display: flex;
+height: 8vh;
+align-items: center;
+justify-content: center;
+border: none;
+background: linear-gradient(293deg, rgba(31,0,36,1) 0%, rgba(148,81,97,0.896796218487395) 35%, rgba(255,0,61,1) 100%);
+button {
+	box-shadow:inset -23px 1px 16px -8px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	background-color:#dfbdfa;
+	border-radius:11px;
+	border:2px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:9px 12px;
+	text-decoration:none;
+	text-shadow:2px 4px 1px #9752cc;
+}
+Button:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+Button:active {
+	position:relative;
+	top:1px;
+}
+
+}
 `
 
 
 export const Box1 = styled.div` 
+width: 33%;
+
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-position: static;
 
-img{
- width: 50% ;
- border-radius: 20%;
-}
-button{
-     width: 40%;
-    height: 8vh;
-    bottom: 6rem;
-    position: relative;
-background-color: red;
-}
 `
 
 export const Box2 = styled.div` 
+width: 33%;
 
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-display:flex;
-flex-direction: column;
-position: static;
 
-img{
-     width: 60%;
-   border-radius: 20%;
-
-}
-button{
-     width: 30%;
-    height: 8vh;
-    bottom: 4rem;
-    position: relative;
-background-color: red;
-}
 `
 export const Box3 = styled.div` 
+width: 33%;
+
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-display:flex;
-flex-direction: column;
-position: static;
 
-img{
-    width: 80%;
-   border-radius: 20%;
-
-
-}
-button{
-    width: 40%;
-    height: 8vh;
-    bottom: 4rem;
-position: relative;
-background-color: red;
-
-}
 `
-

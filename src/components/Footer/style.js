@@ -12,7 +12,7 @@ font-size: 3vh;
 {
 background-color: #F5F5F5;
 
-    width: 90%;
+    width: 92%;
   animation: go-back 3s infinite alternate;
 }
 
@@ -29,8 +29,12 @@ background-color: #F5F5F5;
 
 export const BoxIcons = styled.div `
 display: flex;
-justify-content: space-evenly;
+width: 100%;
+justify-content: space-around;
+
 img{
-  width: 3%;
+  width: %;
+height: 5vh;
 }
 `
+

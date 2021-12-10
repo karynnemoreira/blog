@@ -54,11 +54,11 @@ export function Header() {
         
 
         <S.BoxIcons>
-          <img src={github.url} alt="" />
-          <img src={codesandbox.url} alt="" />
-          <img src={codepen.url} alt="" />
-          <img src={linkedin.url} alt="" />
-          <img src={instagram.url} alt="" />
+        <a href="https://github.com/karynnemoreira" target="_blank" > <img src={github.url} alt="github" /></a>
+        <a href="https://codesandbox.io/u/karynnemoreira" target="_blank" > <img src={codesandbox.url} alt="codesandbox" /></a>
+        <a href="https://codepen.io/Karynne" target="_blank" >  <img src={codepen.url} alt="codepen" /></a>
+        <a href="https://www.linkedin.com/in/karynne-moreira-4865905a/" target="_blank" > <img src={linkedin.url} alt="linkedin" /></a>
+        <a href="https://www.instagram.com/munizkary/" target="_blank" > <img src={instagram.url} alt="instagram" /></a>
 
 
         </S.BoxIcons>

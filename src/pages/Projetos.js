@@ -4,44 +4,33 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
-  width: 100%;
+  width: 100%;  
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  text-align: center;
+ text-align: center;
   text-transform: uppercase;
 background: linear-gradient(180deg, #A60061 14.285%,
 		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
 		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
-		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);  
-
+		#C74D52 71.425%, 85.71%, #8C1D00 85.71%); 
+		
+		p{
+			font-size: 2vh;
+		}
 `
 
-const Box1 = styled.div`
-width: 35%;
+const Box = styled.div`
+width: 50%;
 display: flex;
 flex-direction: column;
-`
-
-const Box2 = styled.div`
-width: 35%;
-display: flex;
-flex-direction: column;
-`
-
-const Box3 = styled.div`
-width: 35%;
-display: flex;
-flex-direction: column;
-`
-const Box4 = styled.div`
-width: 35%;
-display: flex;
-flex-direction: column;
+img{
+  width: 70%;
+height: 30vh;
 
 `
-
-
 
 const BoxButton = styled.button `
 width: 100%;
@@ -128,41 +117,43 @@ query {
 
 	return (
 		<Container>
-			<Box1>
-				
+			<Box>
 				<h2> {titleproj1} </h2>
 				<p> {paragraphproj1} </p>
-				<img src={imgproj1.url} alt="" />
-			</Box1>
+				
+				
 
-			<Box2>
+        <a href="https://codesandbox.io/s/desafio-react-12-pagina-filmes-e-series-8m11i" target="_blank" > <img src={imgproj1.url} alt="github" /></a>
+
+
+			</Box>
+
+			<Box>
 				<h2> {titleproj2} </h2>
-				<p> {paragraphproj2} </p>				
-				<img src={imgproj2.url} alt="" />
-			</Box2>
+				<p> não ta funcionando </p>				
+				        <a href="https://agitated-morse-c6f025.netlify.app/" target="_blank" > <img src={imgproj2.url} alt="" /></a>
 
-			<Box3>
+
+			</Box>
+
+			<Box>
 				<h2> {titleproj3} </h2>
 				<p> {paragraphproj3} </p>
-				<img src={imgproj3.url} alt="" />
-			</Box3>
+        <a href="https://modest-albattani-48a611.netlify.app/" target="_blank" > <img src={imgproj3.url} alt="" /></a>
 
-			<Box4>
+			</Box>
+
+			<Box>
 				<h2> {titleproj4} </h2>
 				<p> {paragraphproj4} </p>
-				<img src={imgproj4.url} alt="" />
-			</Box4>
+				        <a href="https://vigilant-austin-ab84bf.netlify.app/" target="_blank" > <img src={imgproj4.url} alt="" /></a>
 
+			</Box>
 
-			
 	            <BoxButton>
             <Link to="/"> <button> Voltar </button> </Link>
             </BoxButton>
 
 		</Container>
-
-
 	)
-
 }
-

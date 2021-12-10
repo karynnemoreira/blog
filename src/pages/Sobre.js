@@ -1,9 +1,7 @@
 import React from 'react'
-
 import { Link } from 'gatsby'
-
 import styled from "styled-components"
-
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 const Container = styled.div`
@@ -13,8 +11,63 @@ background: linear-gradient(180deg, #A60061 14.285%,
 		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
 		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);  
 `
+const Box = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: column;
+img{
+	width: 30%;
+	border-radius: 20%;
+}
+p{
+	color: #FFF;
+	font-size: 3vh;
+		margin: 1rem;
+		background-color: black;
+}
 
-const BoxButton = styled.button `
+`
+const BoxOne = styled.div`
+display: flex;
+width: 60%;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+margin-top: 2rem;
+`
+const BoxTwo = styled.div`
+display: flex;
+width: 60%;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+`
+const BoxThree = styled.div`
+display: flex;
+width: 60%;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+
+`
+const BoxFour = styled.div`
+display: flex;
+width: 60%;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+`
+const BoxFive = styled.div`
+display: flex;
+width: 60%;
+text-align: center;
+align-items: center;
+justify-content: space-around;
+}
+`
+const BoxButton = styled.button`
 width: 100%;
 display: flex;
 align-items: center;
@@ -48,14 +101,89 @@ Button:active {
 `
 
 
-export default function Sobre() {
-    return (
-        <Container>
-    
-	            <BoxButton>
-            <Link to="/"> <button> Voltar </button> </Link>
-            </BoxButton>
 
-        </Container>
-    )
+export default function Sobre() {
+
+	const data = useStaticQuery(graphql`
+
+query {
+	alldata{
+		sobres {
+    paragraphboxone
+    imgboxone {
+      url
+    }
+    paragraphboxtwo
+    imgboxtwo {
+      url
+    }
+    paragraphboxthree
+    imgboxthree {
+      url
+    }
+    paragraphboxfour
+    imgboxfour{
+      url
+    }
+    paragraphboxfive
+    imgboxfive{
+      url
+    }
+  }
+ 
+  }
+	}
+
+`)
+
+	const {
+		paragraphboxone,
+		imgboxone,
+		paragraphboxtwo,
+		imgboxtwo,
+		paragraphboxthree,
+		imgboxthree,
+		paragraphboxfour,
+		imgboxfour,
+		paragraphboxfive,
+		imgboxfive
+	} = data.alldata.sobres[0];
+
+	return (
+		<Container>
+
+			<Box>
+				<BoxOne>
+					<p> {paragraphboxone} </p>
+					<img src={imgboxone.url} alt="De repente 30" />
+				</BoxOne>
+
+				<BoxTwo>
+					<img src={imgboxtwo.url} alt="eletrotécnica" />
+					<p> {paragraphboxtwo} </p>
+				</BoxTwo>
+
+				<BoxThree>
+					<p> {paragraphboxthree} </p>
+					<img src={imgboxthree.url} alt="comércio" />
+				</BoxThree>
+
+				<BoxFour>
+					<img src={imgboxfour.url} alt="vai na web" />
+					<p> {paragraphboxfour} </p>
+				</BoxFour>
+
+				<BoxFive>
+					<p> {paragraphboxfive} </p>
+					<img src={imgboxfive.url} alt="eu no foguete" />
+				</BoxFive>
+
+			</Box>
+
+			<BoxButton>
+				<Link to="/"> <button> Voltar </button> </Link>
+			</BoxButton>
+
+		</Container>
+	)
 }
