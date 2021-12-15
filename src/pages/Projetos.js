@@ -5,32 +5,80 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 const Container = styled.div`
   width: 100%;  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
-  align-items: center;
- text-align: center;
-  text-transform: uppercase;
 background: linear-gradient(180deg, #A60061 14.285%,
 		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
 		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
 		#C74D52 71.425%, 85.71%, #8C1D00 85.71%); 
-		
-		p{
-			font-size: 2vh;
-		}
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: column;
+img{
+	border-radius: 20%;
+	border: solid #000;
+
+	@media(max-width:1666px) {
+		width: 100%;
+	}
+
+   @media(max-width: 768px) {
+        width: 100%;
+}
+@media(max-width: 425px) {
+width: 100%;
+
+}
+@media(max-width: 375px) {
+width: 100%;
+
+}
+
+
+}
+h2{
+	margin-top: 2rem;
+	font-size: 5vh;
+	@media(max-width: 2560px) {
+        font-size: 6vh;
+}
+@media(max-width: 600px) {
+        font-size: 3vh;
+}
+}
+p{
+	font-size: 3vh;
+	@media(max-width: 2560px) {
+        font-size: 5vh;
+}
+@media(max-width: 1088px) {
+        font-size: 3vh;
+}
+
+@media(max-width: 600px) {
+        font-size: 2vh;
+}
+
+}
+
+
+}
+
+
 `
 
 const Box = styled.div`
-width: 50%;
 display: flex;
+width: 60%;
 flex-direction: column;
-img{
-  width: 70%;
-height: 30vh;
+align-items: center;
+text-align: center;
+
+ 
 
 `
+
+
+
 
 const BoxButton = styled.button `
 width: 100%;
@@ -81,7 +129,7 @@ query {
       url
     }
     titleproj2
-    paragraphoproj2
+     paragraphprojeto2
     imgproj3{
       url
     }
@@ -105,7 +153,7 @@ query {
 		paragraphproj1,
 		imgproj2,
 		titleproj2,
-		paragraphproj2,
+		 paragraphprojeto2,
 		imgproj3,
 		titleproj3,
 		paragraphproj3,
@@ -130,7 +178,7 @@ query {
 
 			<Box>
 				<h2> {titleproj2} </h2>
-				<p> não ta funcionando </p>				
+				<p> {paragraphprojeto2} </p>				
 				        <a href="https://agitated-morse-c6f025.netlify.app/" target="_blank" > <img src={imgproj2.url} alt="" /></a>
 
 

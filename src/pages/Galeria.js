@@ -10,11 +10,26 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #FFF;
 
 background: linear-gradient(180deg, #A60061 14.285%,
 		#B95393 14.285%, 28.57%, #D260A7 28.57%, 42.855%,
 		#EDEDEB 42.855%, 57.14%, #E5ABD0 57.14%, 71.425%,
 		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);  
+
+p, h2{
+  font-size: 6vh;
+  color: #FFF;
+  text-align: center;
+
+  
+  
+@media(max-width: 425px) {
+display: none;
+
+}
+
+}
 
 		img{
 			margin-left: 4%;
@@ -22,7 +37,30 @@ background: linear-gradient(180deg, #A60061 14.285%,
 			width: 15%;
 			height: 35vh;
 			border-radius: 10%;
-		}
+
+@media(max-width: 2560px) {
+width: 20%;
+}
+
+@media(max-width: 1640px) {
+width: 20%;
+}
+
+
+
+@media(max-width: 768px) {
+width: 45%;
+
+}
+@media(max-width: 425px) {
+width: 85%;
+
+}
+@media(max-width: 375px) {
+width: 90%;
+
+}
+
 `
 
 const BoxButton = styled.button`
@@ -56,7 +94,9 @@ Button:active {
 	position:relative;
 	top:1px;
 }
+
 `
+
 
 
 export default function Galeria() {
@@ -144,6 +184,18 @@ query {
     foto26{
       url
     }
+        foto27{
+      url
+    }
+    foto28{
+      url
+    }
+    foto29{
+      url
+    }
+    foto30{
+      url
+    }
   }
 	}
 }
@@ -152,7 +204,7 @@ query {
 
 `)
 
-  const { foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20, foto21, foto22, foto23, foto24, foto25, foto26 } = data.alldata.galerias[0];
+  const { foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9, foto10, foto11, foto12, foto13, foto14, foto15, foto16, foto17, foto18, foto19, foto20, foto21, foto22, foto23, foto24, foto25, foto26, foto27, foto28, foto29, foto30 } = data.alldata.galerias[0];
 
   return (
     <Container>
@@ -172,7 +224,6 @@ query {
         <img src={foto8.url} alt="" />
         <img src={foto9.url} alt="" />
         <img src={foto10.url} alt="" />
-
         <img src={foto11.url} alt="" />
         <img src={foto12.url} alt="" />
         <img src={foto13.url} alt="" />
@@ -189,6 +240,10 @@ query {
         <img src={foto24.url} alt="" />
         <img src={foto25.url} alt="" />
         <img src={foto26.url} alt="" />
+        <img src={foto27.url} alt="" />
+        <img src={foto28.url} alt="" />
+        <img src={foto29.url} alt="" />
+        <img src={foto30.url} alt="" />
 
       </div>
 

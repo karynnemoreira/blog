@@ -10,10 +10,14 @@ background: linear-gradient(180deg, #A60061 14.285%,
 		#C74D52 71.425%, 85.71%, #8C1D00 85.71%);
 display: flex;
 flex-direction: column;
+
 img{
     width: 50%;
 }
+
+	
 `
+
 
 export const ContainerTwo = styled.div` 
 margin-top: 1rem;
@@ -30,6 +34,7 @@ justify-content: center;
 img{
     border-radius: 50%;
 }
+
 `
 
 export const BoxContainerTwo = styled.div`
@@ -44,13 +49,13 @@ p{
     width: 60%;
     font-size: 4vh;
 }
+
 `
 export const ContainerOne = styled.div` 
 width: 100%;
 margin-top: 4rem;
 margin-bottom: 2rem;
 display: flex;
-
 img{
 width: 60%;
  border-radius: 20%;
@@ -93,6 +98,12 @@ Button:active {
 }
 
 }
+
+
+ 
+
+
+
 `
 
 
@@ -103,6 +114,7 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
 
 `
 
@@ -120,7 +132,7 @@ width: 33%;
 
 display:flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
+
 
 `

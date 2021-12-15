@@ -18,15 +18,48 @@ justify-content: space-evenly;
 align-items: center;
 flex-direction: column;
 img{
-	width: 30%;
+	width: 50%;
 	border-radius: 20%;
+
+  @media(max-width: 1600px) {
+      width: 40%;
+}
+
+  @media(max-width: 1440px) {
+      width: 50%;
+}
+
+      @media(max-width: 768px) {
+        width: 80%;
+}
+
+  @media(max-width: 568px) {
+        width: 90%;
+       
+}
+
+
 }
 p{
 	color: #FFF;
-	font-size: 3vh;
-		margin: 1rem;
+	font-size: 4vh;
+		margin: 2rem;
 		background-color: black;
+
+ @media(max-width: 1600px) {
+      width: 60%;
+	  font-size: 3vh;
 }
+
+  @media(max-width: 1440px) {
+      width: 50%;
+	  font-size: 4vh;
+}
+
+      @media(max-width: 768px) {
+		font-size: 3vh;
+}
+
 
 `
 const BoxOne = styled.div`
